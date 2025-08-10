@@ -1,0 +1,90 @@
+body{
+  background-color: #79c9f9;
+  display: grid;
+  place-items: center;
+}
+#pokedex{
+  position: relative;
+  #poke-photo{
+    background-color: white;
+    position: absolute;
+    width: 26%;
+    height: 27%;
+    top: 34%;
+    left: 11%;
+    border-radius: 15%;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    border: 5px solid #323232;
+  }
+  #poke-info{
+    background-color: white;
+    position: absolute;
+    width: 35%;
+    height: 20%;
+    top: 32%;
+    left: 58.5%;
+    border-radius: 20px;
+  }
+  #poke-name{
+    background-color: greenyellow;
+    position: absolute;
+    width: 15.6%;
+    height: 8.2%;
+    top: 81.5%;
+    left: 13.5%;
+    border-radius: 5px;
+    color: black;
+    text-align: center;
+    box-sizing: border-box;
+    padding: 15px;
+    font-size: large;
+    font-weight: bold;
+  }
+  #poke-type1{
+    background-color: white;
+    position: absolute;
+    width: 11.9%;
+    height: 6.9%;
+    top: 84.5%;
+    left: 61%;
+    border-radius: 7px;
+    color: black;
+    font-weight: bold;
+    font-size: large;
+    text-align: center;
+    box-sizing: border-box;
+    padding: 10px;
+
+  }
+  #poke-type2{
+    background-color: white;
+    position: absolute;
+    width: 11.9%;
+    height: 6.9%;
+    top: 84.5%;
+    left: 79.3%;
+    border-radius: 7px;
+    color: black;
+    font-weight: bold;
+    font-size: large;
+    text-align: center;
+    box-sizing: border-box;
+    padding: 10px;
+  }
+  #poke-back-button{
+    position: absolute;
+    width: 8%;
+    height: 6.9%;
+    top: 75.5%;
+    left: 58.9%;
+  }
+  #poke-next-button{
+    position: absolute;
+    width: 8%;
+    height: 6.9%;
+    top: 75.5%;
+    left: 66.9%;
+  }
+}
