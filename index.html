@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Dedicated to Bilal</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: #f4f4f4;
+            padding: 0px 300px 0px 300px;
+        }
+        h2 {
+            background: #333;
+            color: white;
+            padding: 10px;
+        }
+        pre {
+            background: #222;
+            color: #0f0;
+            padding: 15px;
+            border-radius: 5px;
+            overflow-x: auto;
+        }
+        .output {
+            background: #fff;
+            padding: 10px;
+            border-left: 5px solid #000;
+            font-family: monospace;
+            margin-bottom: 20px;
+        }
+    </style>
+</head>
+<body>
+
+<h2>PRACTICAL NO 1: Even or Odd</h2>
+<pre>
+import java.util.Scanner;
+
+class EvenOdd {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        System.out.print("Enter a number: ");
+        int num = sc.nextInt();
+        if (num % 2 == 0)
+            System.out.println(num + " is Even");
+        else
+            System.out.println(num + " is Odd");
+    }
+}
+</pre>
+<div class="output">OUTPUT:<br>Enter a number: 7<br>7 is Odd</div>
+
+
+<h2>PRACTICAL NO 2: Factorial of a Number</h2>
+<pre>
+import java.util.Scanner;
+
+class Factorial {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        System.out.print("Enter a number: ");
+        int n = sc.nextInt();
+        int fact = 1;
+        for (int i = 1; i <= n; i++)
+            fact *= i;
+        System.out.println("Factorial of " + n + " = " + fact);
+    }
+}
+</pre>
+<div class="output">OUTPUT:<br>Enter a number: 5<br>Factorial of 5 = 120</div>
+
+
+<h2>PRACTICAL NO 3: Largest Number in Array</h2>
+<pre>
+class LargestInArray {
+    public static void main(String[] args) {
+        int arr[] = {10, 25, 5, 42, 15};
+        int max = arr[0];
+        for (int i = 1; i < arr.length; i++)
+            if (arr[i] > max)
+                max = arr[i];
+        System.out.println("Largest number = " + max);
+    }
+}
+</pre>
+<div class="output">OUTPUT:<br>Largest number = 42</div>
+
+
+<h2>PRACTICAL NO 4: Palindrome String</h2>
+<pre>
+import java.util.Scanner;
+
+class Palindrome {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        System.out.print("Enter a string: ");
+        String str = sc.nextLine();
+        String rev = new StringBuilder(str).reverse().toString();
+        if (str.equalsIgnoreCase(rev))
+            System.out.println("Palindrome");
+        else
+            System.out.println("Not Palindrome");
+    }
+}
+</pre>
+<div class="output">OUTPUT:<br>Enter a string: level<br>Palindrome</div>
+
+
+<h2>PRACTICAL NO 5: Student Class</h2>
+<pre>
+class Student {
+    int rollNo;
+    String name;
+    double marks;
+
+    void input(int r, String n, double m) {
+        rollNo = r;
+        name = n;
+        marks = m;
+    }
+
+    void display() {
+        System.out.println("Roll No: " + rollNo);
+        System.out.println("Name: " + name);
+        System.out.println("Marks: " + marks);
+    }
+
+    public static void main(String[] args) {
+        Student s1 = new Student();
+        s1.input(101, "Bilal", 88.5);
+        s1.display();
+    }
+}
+</pre>
+<div class="output">OUTPUT:<br>Roll No: 101<br>Name: Bilal<br>Marks: 88.5</div>
+
+
+<h2>PRACTICAL NO 6: Single Inheritance</h2>
+<pre>
+class Person {
+    void show() {
+        System.out.println("I am a person");
+    }
+}
+
+class Student extends Person {
+    void display() {
+        System.out.println("I am a student");
+    }
+
+    public static void main(String[] args) {
+        Student s = new Student();
+        s.show();
+        s.display();
+    }
+}
+</pre>
+<div class="output">OUTPUT:<br>I am a person<br>I am a student</div>
+
+
+<h2>PRACTICAL NO 7: Interface</h2>
+<pre>
+interface Animal {
+    void sound();
+}
+
+class Dog implements Animal {
+    public void sound() {
+        System.out.println("Dog barks");
+    }
+
+    public static void main(String[] args) {
+        Dog d = new Dog();
+        d.sound();
+    }
+}
+</pre>
+<div class="output">OUTPUT:<br>Dog barks</div>
+
+
+<h2>PRACTICAL NO 8: ArithmeticException</h2>
+<pre>
+class ExceptionDemo {
+    public static void main(String[] args) {
+        try {
+            int a = 10, b = 0;
+            int c = a / b;
+            System.out.println("Result: " + c);
+        } catch (ArithmeticException e) {
+            System.out.println("Cannot divide by zero!");
+        }
+    }
+}
+</pre>
+<div class="output">OUTPUT:<br>Cannot divide by zero!</div>
+
+
+<h2>PRACTICAL NO 9: File Handling</h2>
+<pre>
+import java.io.*;
+
+class FileDemo {
+    public static void main(String[] args) throws IOException {
+        FileWriter fw = new FileWriter("sample.txt");
+        fw.write("Hello Java File Handling");
+        fw.close();
+
+        FileReader fr = new FileReader("sample.txt");
+        int ch;
+        while ((ch = fr.read()) != -1)
+            System.out.print((char) ch);
+        fr.close();
+    }
+}
+</pre>
+<div class="output">OUTPUT:<br>Hello Java File Handling</div>
+
+
+<h2>PRACTICAL NO 10: Multithreading</h2>
+<pre>
+class MyThread extends Thread {
+    public void run() {
+        for (int i = 1; i <= 5; i++)
+            System.out.println(Thread.currentThread().getName() + " - " + i);
+    }
+
+    public static void main(String[] args) {
+        MyThread t1 = new MyThread();
+        MyThread t2 = new MyThread();
+        t1.start();
+        t2.start();
+    }
+}
+</pre>
+<div class="output">OUTPUT:<br>Thread-0 - 1<br>Thread-1 - 1<br>Thread-0 - 2<br>Thread-1 - 2<br>...</div>
+
+</body>
+</html>
