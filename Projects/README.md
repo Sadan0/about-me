@@ -1,2 +1,0 @@
-# about-me
-Practicing github.
